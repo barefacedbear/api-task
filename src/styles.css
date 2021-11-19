@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main-height {
+  min-height: auto;
+  height: 100%;
+}
+
+.mat-form-field-flex>.mat-form-field-infix { padding: 0.4em 0px !important; }
+
+.mat-form-field-label-wrapper { top: -1.5em; }
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-1.1em) scale(.75);
+  width: 133.33333%;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.login-form {
+    width: 500px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+
+.login-btn { border-radius: 20px; }

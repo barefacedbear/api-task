@@ -1,0 +1,10 @@
+{
+  "/audit": {
+    "target": "https://crudcrud.com/api/37208a66a8074a64860a9c6b9989284a/task",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/audit": ""
+    }
+  }
+}
