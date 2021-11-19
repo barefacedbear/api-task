@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.css']
+  templateUrl: './delete.component.html'
 })
-export class DeleteComponent implements OnInit {
+export class DeleteComponent {
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<DeleteComponent>) { }
 
-  ngOnInit(): void {
+  onDelete = () => this.dialogRef.close(true);
+
+  @HostListener('window:keyup', ['$event'])
+  action(event: KeyboardEvent) {
+    if(event.key === 'Enter') {
+      this.onDelete();
+    }
   }
 
 }

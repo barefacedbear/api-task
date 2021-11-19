@@ -1,3 +1,5 @@
-<app-header></app-header>
-<main role="main" class="main-height w-100"><router-outlet></router-outlet></main>
-<app-footer></app-footer>
+<div class="h-100 w-100 d-flex flex-column">
+    <div class="header"><app-header></app-header></div>
+    <div class="content"><router-outlet></router-outlet></div>
+    <div class="footer"><app-footer></app-footer></div>
+</div>
