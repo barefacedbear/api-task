@@ -1,27 +1,64 @@
-# Task
+# Task - Api
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+This is the backend of the site.
 
-## Development server
+---
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For development, you will only need Node.js and a node global package, NPM, installed in your environement.
 
-## Code scaffolding
+### Node
+- #### Node installation on Windows
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
 
-## Build
+- #### Node installation on Ubuntu
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  You can install nodejs and npm easily with apt install, just run the following commands.
 
-## Running unit tests
+      $ sudo apt install nodejs
+      $ sudo apt install npm
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- #### Other Operating Systems
+  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
 
-## Running end-to-end tests
+If the installation was successful, you should be able to run the following command.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    $ node --version
+    v12.18.3
 
-## Further help
+    $ npm --version
+    6.14.6
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
+
+    $ npm install npm -g
+
+###
+### Yarn installation
+  After installing node, this project will need yarn too, so just run the following command.
+
+      $ npm install -g yarn
+
+---
+
+## Install
+
+    $ git clone https://github.com/barefacedbear/api-task.git
+    $ cd api-task
+    $ npm install
+
+## Configure (if Api URL gets expired)
+    
+    $ Go to proxy.conf.json file
+    $ Change the URL as required
+    $ Stop and restart the project
+
+## Running the project in development mode
+
+    $ npm start
+
+## Build the project for production
+
+    $ npm build

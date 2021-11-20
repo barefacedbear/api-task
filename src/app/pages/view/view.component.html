@@ -19,7 +19,7 @@
       </ng-container>
       <ng-container matColumnDef="action">
         <mat-header-cell *matHeaderCellDef>
-          <button mat-raised-button color="primary" (click)="openDialog(null, 'Add')">Add New</button>
+          <button mat-raised-button color="primary" fxHide fxShow.lt-md (click)="openDialog(null, 'Add')">Add New</button>
         </mat-header-cell>
         <mat-cell *matCellDef="let element" data-label="action" style="cursor: pointer;">
           <mat-icon color="primary" (click)="openDialog(element, 'Update')">edit</mat-icon>

@@ -3,26 +3,32 @@
   <form [formGroup]="form">
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
-      <input matInput formControlName="name" />
+      <input matInput formControlName="name" [errorStateMatcher]="matcher" />
+      <mat-error>Name Required</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Age</mat-label>
-      <input type="number" matInput formControlName="age" />
+      <input matInput formControlName="age" [errorStateMatcher]="matcher" />
+      <mat-error *ngIf="Age.errors?.required">Age required</mat-error>
+      <mat-error *ngIf="Age.errors?.minlength || Age.errors?.maxlength">Age should be between 10 - 60 yrs</mat-error>
+      <mat-error *ngIf="Age.errors?.pattern">Invalid data</mat-error>
     </mat-form-field>
     <div class="mb-3">
-      <label class="me-3">Gender:</label>
+      <label class="me-3">Gender: <small class="text-danger">*</small></label>
       <mat-radio-group formControlName="gender">
         <mat-radio-button class="me-3" value="Male">Male</mat-radio-button>
         <mat-radio-button value="Female">Female</mat-radio-button>
       </mat-radio-group>
     </div>
     <mat-form-field appearance="outline">
-      <mat-label>Phone</mat-label>
-      <input type="tel" matInput formControlName="phone" />
+      <mat-label>Phone (+91)</mat-label>
+      <input type="tel" matInput phonePattern formControlName="phone" (keyup)="checkPhoneValue($event)" [errorStateMatcher]="matcher" />
+      <mat-error *ngIf="Phone.errors?.required">Phone Number required</mat-error>
+      <mat-error *ngIf="Phone.errors?.maxlength || Phone.errors?.minlength">Invalid phone number</mat-error>
     </mat-form-field>
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close="false">Cancel</button>
-  <button mat-button color="primary" (click)="action()">{{ data.type.split(' ')[0] }}</button>
+  <button mat-flat-button color="primary" (click)="action()" [disabled]="form.invalid">{{ data.type.split(' ')[0] }}</button>
 </mat-dialog-actions>

@@ -1,4 +1,10 @@
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 640px) {
+
+  .mat-raised-button {
+    padding: 0 5px;
+    font-size: 3vw;
+  }
+
   .mat-table {
     border: 0;
     vertical-align: middle
@@ -19,6 +25,7 @@
     font-weight: bold;
     height: 30px;
     margin-bottom: 4%;
+    padding: 0 24px;
   }
 
   .mat-table .mat-cell:before {

@@ -10,16 +10,16 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
     exports: [
-        MatFormFieldModule, MatInputModule,
-        MatButtonModule, MatIconModule,
+        MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule,
         MatDialogModule, MatTableModule, MatPaginatorModule, MatSortModule,
-        MatProgressBarModule, MatRadioModule, MatToolbarModule
+        MatProgressBarModule, MatRadioModule, MatToolbarModule, MatSnackBarModule
     ],
     providers: [
-        // { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { verticalPosition: 'top', horizontalPosition: 'right', duration: 5000 } }
+        { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { verticalPosition: 'top', horizontalPosition: 'right', duration: 5000 } }
     ]
 })
 

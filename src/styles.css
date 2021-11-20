@@ -24,6 +24,32 @@ mat-form-field { width: 100%; }
   border-radius: 5px;
 }
 
+mat-icon { vertical-align: middle; }
+
+.toastr-bg {
+  background-color: #fff !important;
+  color: #242323 !important;
+  letter-spacing: 1px !important;
+  font-weight: 500 !important;
+}
+.success { border-left: 6px solid #388e3c; }
+
+.success .mat-simple-snackbar-action { color: #388e3c; }
+
+.warning { border-left: 6px solid #f57f17; }
+
+.warning .mat-simple-snackbar-action { color: #f57f17; }
+
+.info { border-left: 6px solid #0372bd; }
+
+.info .mat-simple-snackbar-action { color: #0372bd; }
+
+.danger { border-left: 6px solid #e64a19; }
+
+.danger .mat-simple-snackbar-action { color: #e64a19; }
+
+.space-right { flex: 1 1 auto; }
+
 .content{
   flex-shrink: 1;
   flex-grow: 1;

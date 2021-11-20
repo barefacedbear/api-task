@@ -7,7 +7,7 @@ import { ViewComponent } from './pages/view/view.component';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'view', component: ViewComponent } //canActivate: [AuthGuard]
+  { path: 'view', component: ViewComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
