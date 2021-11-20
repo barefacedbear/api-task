@@ -62,3 +62,8 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 ## Build the project for production
 
     $ npm build
+
+
+## To login into the application
+
+    $ Use both username and password as "admin" (without quotes)
